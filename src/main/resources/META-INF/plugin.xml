@@ -6,8 +6,23 @@
     <vendor>implicated</vendor>
 
     <depends>com.intellij.modules.lang</depends>
+    <depends>AceJump</depends>
+    <depends>IdeaVIM</depends>
+    <depends>IdeaVimExtension</depends>
+    <depends>com.joshestein.ideavim-quickscope</depends>
+    <depends>org.jetbrains.IdeaVim-EasyMotion</depends>
+    <depends>com.mallowigi</depends>
+    <depends>String Manipulation</depends>
+    <depends>izhangzhihao.rainbow.brackets</depends>
+    <depends>org.asciidoctor.intellij.asciidoc</depends>
+    <depends>PlantUML integration</depends>
+    <depends>com.sburlyaev.terminal.plugin</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <bundledKeymap file="vim.xml" />
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="bunny-dark-native"
+                       path="/theme/bunny-dark-native.theme.json"/>
     </extensions>
 </idea-plugin>
