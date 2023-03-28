@@ -1,4 +1,4 @@
-<keymap version="1" name="vim" parent="$default" disable-mnemonics="true">
+<keymap version="1" name="vim" parent="Mac OS X 10.5+" disable-mnemonics="true">
   <!--VCS-->
   <action id="CheckinProject" />
   <action id="Diff.ApplyNonConflicts">
