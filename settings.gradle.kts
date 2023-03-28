@@ -1,1 +1,1 @@
-rootProject.name = "bunny"
+rootProject.name = "bunnykeymap"
