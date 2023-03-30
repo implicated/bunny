@@ -1,0 +1,199 @@
+<templateSet group="Bunny">
+    <!--AsciiDoc-->
+    <template name="keyboard" value="kbd:[$VAR$]$END$" description="Keyboard" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="smart" value="$KEY$$SELECTION$$KEY$$END$" description="selection" toReformat="false"
+              toShortenFQNames="false">
+        <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="sourcef" value="[source,$LANG$]&#10;.$FILENAME$&#10;----&#10;$SOURCE$&#10;----&#10;$END$"
+              description="Source code" toReformat="false" toShortenFQNames="true">
+        <variable name="LANG" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="FILENAME" expression="" defaultValue="&quot;filename&quot;" alwaysStopAt="true"/>
+        <variable name="SOURCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="table2" value="|===&#10;| $cell1header$ | $cell2header$&#10;|==="
+              description="Table with two columns" toReformat="false" toShortenFQNames="true">
+        <variable name="cell1header" expression="" defaultValue="&quot;HeaderCell1&quot;" alwaysStopAt="true"/>
+        <variable name="cell2header" expression="" defaultValue="&quot;HeaderCell2&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="source" value="[source,$LANG$,indent=0]&#10;----&#10;$SOURCE$&#10;----&#10;$END$"
+              description="Source code" toReformat="false" toShortenFQNames="true">
+        <variable name="LANG" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="SOURCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="include" value="include::$CONTEXT$[]$END$" description="Include" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="CONTEXT" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="xref" value="xref:$CONTEXT$[]$END$" description="Cross Reference" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="CONTEXT" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="youtube" value=".$NAME$&#10;video::$YOUTUBE$[youtube,lang=zh-CN]&#10;&#10;$END$"
+              description="Youtube video" toReformat="false" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="YOUTUBE" expression="" defaultValue="&quot;nPER_vv2SyU&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="admonition-para" value="$TYPE$: $TEXT$&#10;" description="admonition paragraph" toReformat="false"
+              toShortenFQNames="false">
+        <variable name="TYPE"
+                  expression="enum(&quot;NOTE&quot;,&quot;TIP&quot;,&quot;IMPORTANT&quot;,&quot;CAUTION&quot;,&quot;WARNING&quot;)"
+                  defaultValue="" alwaysStopAt="true"/>
+        <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="admonition-block" value="[$TYPE$]&#10;====&#10;$TEXT$&#10;====" description="admonition block"
+              toReformat="false" toShortenFQNames="false">
+        <variable name="TYPE"
+                  expression="enum(&quot;NOTE&quot;,&quot;TIP&quot;,&quot;IMPORTANT&quot;,&quot;CAUTION&quot;,&quot;WARNING&quot;)"
+                  defaultValue="NOTE" alwaysStopAt="true"/>
+        <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="image" value="image::$FILENAME$[]&#10;&#10;$END$" description="Image" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="FILENAME" expression="" defaultValue="&quot;filename.jpg&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="xxref" value="* xref:$CONTEXT$[]$END$" description="Cross Reference" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="CONTEXT" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="ifdef" value="ifdef::env-idea[]&#10;$SELECTION$&#10;endif::[]" description="admonition block"
+              toReformat="false" toShortenFQNames="false">
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="tag-include" value="$cmt$ tag::$tagname$[]&#10;$SELECTION$&#10;$cmt$ end::$tagname$[]"
+              description="AsciiDoc Tags to be used with include macro" toReformat="true" toShortenFQNames="true">
+        <variable name="cmt" expression="lineCommentStart()" defaultValue="" alwaysStopAt="false"/>
+        <variable name="tagname" expression="" defaultValue="&quot;tagname&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="btn" value="btn:$END$[]" description="Button" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="menu" value="menu:$main$[$menu$]$END$" description="Menu Macro" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="main" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="menu" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="coll" value="[%collapsible]" description="collapsible block" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+    <template name="sourcec"
+              value="[%collapsible%open]&#10;====&#10;[source,$LANG$,indent=0]&#10;----&#10;$SOURCE$&#10;----&#10;$END$&#10;===="
+              description="Source code" toReformat="false" toShortenFQNames="true">
+        <variable name="LANG" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="SOURCE" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="AsciiDoc" value="true"/>
+        </context>
+    </template>
+
+
+    <!--Java-->
+    <template name="tt" value="@Test&#10;public void $method$() {&#10;    $END$&#10;}" description="test method"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="method" expression="" defaultValue="one" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="loo"
+              value="@EqualsAndHashCode(callSuper = true)&#10;@Data&#10;@AllArgsConstructor&#10;@NoArgsConstructor&#10;@Builder"
+              description="lombok" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="fore" value="for ($ELEMENT_TYPE$ $VAR$ : $ITERABLE_TYPE$) {&#10;  $END$&#10;}"
+              description="Iterate Iterable or array" toReformat="true" toShortenFQNames="true">
+        <variable name="ITERABLE_TYPE" expression="iterableVariable()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="ELEMENT_TYPE" expression="iterableComponentType(ITERABLE_TYPE)"
+                  defaultValue="&quot;java.lang.Object&quot;" alwaysStopAt="false"/>
+        <variable name="VAR" expression="suggestVariableName()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="ress" value="@Resource&#10;private $END$" description="@Resource" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="logi" value="log.info(&quot;log#$METHOD$ ==&gt; $PARAM$:{{}}&quot;, $END$);" description="log info"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="METHOD" expression="methodName()" defaultValue="" alwaysStopAt="false"/>
+        <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="doc"
+              value="/**&#10; * &lt;p&gt;&#10; * Description:$CLASS$&#10; * &lt;/p&gt;&#10; *&#10; * @author zhang.yu@qhlt.com.cn&#10; * @version 1.0&#10; * @since $DATE$ $TIME$ $END$&#10; */"
+              description="" toReformat="false" toShortenFQNames="true" deactivated="true">
+        <variable name="CLASS" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="DATE" expression="date(&quot;yyyy/MM/dd&quot;)" defaultValue="" alwaysStopAt="false"/>
+        <variable name="TIME" expression="time()" defaultValue="" alwaysStopAt="false"/>
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+
+
+    <!--Other-->
+    <template name="no-format" value="// @formatter:off&#10;$SELECTION$&#10;// @formatter:on" description="" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+</templateSet>

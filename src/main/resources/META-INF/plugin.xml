@@ -1,28 +1,36 @@
 <idea-plugin>
-    <id>cc.implicated.intellij.plugins.vim</id>
+    <id>cc.implicated.intellij.plugins.bunny</id>
 
-    <name>Bunny Keymap</name>
+    <name>Bunny</name>
 
     <vendor>implicated</vendor>
 
     <depends>com.intellij.modules.lang</depends>
-    <depends>AceJump</depends>
+    <depends>org.asciidoctor.intellij.asciidoc</depends>
     <depends>IdeaVIM</depends>
+    <depends>AceJump</depends>
     <depends>IdeaVimExtension</depends>
     <depends>com.joshestein.ideavim-quickscope</depends>
     <depends>org.jetbrains.IdeaVim-EasyMotion</depends>
-    <depends>com.mallowigi</depends>
     <depends>String Manipulation</depends>
     <depends>izhangzhihao.rainbow.brackets</depends>
-    <depends>org.asciidoctor.intellij.asciidoc</depends>
     <depends>PlantUML integration</depends>
-    <depends>com.sburlyaev.terminal.plugin</depends>
+    <depends>com.mallowigi</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <bundledKeymap file="vim.xml" />
-    </extensions>
-    <extensions defaultExtensionNs="com.intellij">
+        <bundledKeymap file="vim.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/Bunny.xml"/>
         <themeProvider id="bunny-dark-native"
                        path="/theme/bunny-dark-native.theme.json"/>
     </extensions>
+
+    <actions>
+        <action id="bunny.terminal.OpenTerminalAction"
+                class="bunny.terminal.OpenTerminalAction"
+                text="Open in External Terminal"
+                description="Open current file location in external terminal"
+                icon="Icons.TERMINAL_ICON">
+<!--            <add-to-group group-id="RunContextPopupGroup" anchor="before" relative-to-action="OpenInBrowserGroup"/>-->
+        </action>
+    </actions>
 </idea-plugin>

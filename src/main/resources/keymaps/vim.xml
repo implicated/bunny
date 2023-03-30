@@ -58,14 +58,20 @@
         <keyboard-shortcut first-keystroke="meta 4"/>
     </action>
     <action id="ActivateGradleToolWindow">
-        <keyboard-shortcut first-keystroke="meta 5"/>
+        <keyboard-shortcut first-keystroke="meta 4"/>
     </action>
+    <action id="ActivateBookmarksToolWindow"/>
+    <action id="ActivateRunToolWindow"/>
+    <action id="ActivateDebugToolWindow"/>
+
 
     <!--Editor-->
     <action id="EditorBackSpace">
         <keyboard-shortcut first-keystroke="control H"/>
+        <keyboard-shortcut first-keystroke="BACK_SPACE"/>
     </action>
     <action id="EditorDelete">
         <keyboard-shortcut first-keystroke="control D"/>
+        <keyboard-shortcut first-keystroke="DELETE"/>
     </action>
 </keymap>
