@@ -19,7 +19,10 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <bundledKeymap file="vim.xml"/>
-        <defaultLiveTemplates file="/liveTemplates/Bunny.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/bunny-asciidoc.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/bunny-idea.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/bunny-java.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/bunny-sql.xml"/>
         <themeProvider id="bunny-dark-native"
                        path="/theme/bunny-dark-native.theme.json"/>
     </extensions>

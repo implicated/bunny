@@ -1,0 +1,63 @@
+<templateSet group="Bunny SQL">
+    <!--SQL-->
+    <template name="sel" value="select * from $table$ a $END$;" description="select all rows from a table"
+              toReformat="false" toShortenFQNames="false">
+        <variable name="table" expression="clipboard()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="SQL" value="true"/>
+        </context>
+    </template>
+    <template name="selc" value="select count(*) from $table$ a $END$;"
+              description="select the number of specific rows in a table" toReformat="false" toShortenFQNames="false">
+        <variable name="table" expression="clipboard()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="SQL" value="true"/>
+        </context>
+    </template>
+    <template name="selw" value="select * from $table$ a where a.$END$;" description="select specific rows from a table"
+              toReformat="false" toShortenFQNames="false">
+        <variable name="table" expression="dbObjectName()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="SQL" value="true"/>
+        </context>
+    </template>
+    <template name="upd" value="update $table_name$ set $col$ = $value$ where $END$;"
+              description="update values in a table" toReformat="false" toShortenFQNames="false">
+        <variable name="table_name" expression="dbObjectName" defaultValue="" alwaysStopAt="true"/>
+        <variable name="col" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="value" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="SQL" value="true"/>
+        </context>
+    </template>
+    <template name="ins" value="insert into $table$ ($columns$) values ($info$$END$);"
+              description="insert rows into a table" toReformat="false" toShortenFQNames="false">
+        <variable name="table" expression="dbObjectName()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="columns" expression="dbColumns()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="info" expression="showParameterInfo()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="SQL" value="true"/>
+        </context>
+    </template>
+    <template name="del" value="delete from $table$ where $END$;" description="delete rows from a table"
+              toReformat="false" toShortenFQNames="false">
+        <variable name="table" expression="dbObjectName()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="SQL" value="true"/>
+        </context>
+    </template>
+    <template name="asel"
+              value="select concat('select * from ', a.TABLE_NAME, ';') from information_schema.TABLES a where a.TABLE_NAME like '%$END$%';"
+              description="" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="SQL" value="true"/>
+        </context>
+    </template>
+    <template name="ssel"
+              value="select concat('- ', DATA_TYPE, ' : ', COLUMN_NAME, '\\t\\t\\t\\t', COLUMN_COMMENT, '') from information_schema.COLUMNS a where a.TABLE_NAME like '%$END$%';"
+              description="" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="SQL" value="true"/>
+        </context>
+    </template>
+</templateSet>

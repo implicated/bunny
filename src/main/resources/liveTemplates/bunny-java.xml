@@ -1,0 +1,72 @@
+<templateSet group="Bunny Java">
+    <!--Java-->
+    <template name="tt" value="@Test&#10;public void $method$() {&#10;    $END$&#10;}" description="test method"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="method" expression="" defaultValue="one" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="loo"
+              value="@EqualsAndHashCode(callSuper = true)&#10;@Data&#10;@AllArgsConstructor&#10;@NoArgsConstructor&#10;@Builder"
+              description="lombok" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="fore" value="for ($ELEMENT_TYPE$ $VAR$ : $ITERABLE_TYPE$) {&#10;  $END$&#10;}"
+              description="Iterate Iterable or array" toReformat="true" toShortenFQNames="true">
+        <variable name="ITERABLE_TYPE" expression="iterableVariable()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="ELEMENT_TYPE" expression="iterableComponentType(ITERABLE_TYPE)"
+                  defaultValue="&quot;java.lang.Object&quot;" alwaysStopAt="false"/>
+        <variable name="VAR" expression="suggestVariableName()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="ress" value="@Resource&#10;private $END$" description="@Resource" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="logi" value="log.info(&quot;log#$METHOD$ ==&gt; $PARAM$:{{}}&quot;, $END$);" description="log info"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="METHOD" expression="methodName()" defaultValue="" alwaysStopAt="false"/>
+        <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="logd" value="log.debug(&quot;log#$METHOD$ ==&gt; $PARAM$:{{}}&quot;, $END$);" description="log info"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="METHOD" expression="methodName()" defaultValue="" alwaysStopAt="false"/>
+        <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="loge" value="log.error(&quot;log#$METHOD$ ==&gt; $PARAM$:{{}}&quot;, $END$);" description="log info"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="METHOD" expression="methodName()" defaultValue="" alwaysStopAt="false"/>
+        <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="sout" value="System.out::println" description="Print a string to System.out double colon"
+              toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+        </context>
+    </template>
+    <template name="doc"
+              value="/**&#10; * &lt;p&gt;&#10; * Description:$CLASS$&#10; * &lt;/p&gt;&#10; *&#10; * @author $AUTHOR$&#10; * @version 1.0&#10; * @since $DATE$ $TIME$ $END$&#10; */"
+              description="Java Doc" toReformat="false" toShortenFQNames="true">
+        <variable name="CLASS" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="AUTHOR" expression="zhang.yu@qhlt.com.cn" defaultValue="" alwaysStopAt="true"/>
+        <variable name="DATE" expression="date(&quot;yyyy/MM/dd&quot;)" defaultValue="" alwaysStopAt="false"/>
+        <variable name="TIME" expression="time()" defaultValue="" alwaysStopAt="false"/>
+        <context/>
+    </template>
+</templateSet>

@@ -1,0 +1,7 @@
+<templateSet group="Bunny IDEA">
+    <template name="no-format" value="// @formatter:off&#10;$SELECTION$&#10;// @formatter:on" description="" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+</templateSet>

@@ -31,16 +31,24 @@
 
 
     <!--System-->
+    <action id="PreviousWindow">
+        <keyboard-shortcut first-keystroke="meta j"/>
+    </action>
+    <action id="NextWindow">
+        <keyboard-shortcut first-keystroke="meta k"/>
+    </action>
+    <action id="PreviousTab">
+        <keyboard-shortcut first-keystroke="alt j"/>
+    </action>
+    <action id="NextTab">
+        <keyboard-shortcut first-keystroke="alt k"/>
+    </action>
     <action id="HideAllWindows">
         <keyboard-shortcut first-keystroke="shift meta space"/>
     </action>
     <action id="GotoAction">
         <keyboard-shortcut first-keystroke="shift meta p"/>
     </action>
-    <action id="NextTab"/>
-    <action id="PreviousTab"/>
-    <action id="NextWindow"/>
-    <action id="PreviousWindow"/>
     <action id="MinimizeCurrentWindow"/>
     <action id="Editor LRU"/>
     <action id="Run"/>
@@ -60,7 +68,11 @@
     <action id="ActivateGradleToolWindow">
         <keyboard-shortcut first-keystroke="meta 4"/>
     </action>
+    <action id="ActivateWebInspectorToolWindow">
+        <keyboard-shortcut first-keystroke="meta 4"/>
+    </action>
     <action id="ActivateBookmarksToolWindow"/>
+    <action id="ActivateDatabaseToolWindow"/>
     <action id="ActivateRunToolWindow"/>
     <action id="ActivateDebugToolWindow"/>
 
@@ -73,5 +85,12 @@
     <action id="EditorDelete">
         <keyboard-shortcut first-keystroke="control D"/>
         <keyboard-shortcut first-keystroke="DELETE"/>
+    </action>
+    <action id="Generate"/>
+    <action id="InsertLiveTemplate"/>
+
+    <!--Popup-->
+    <action id="FileStructurePopup">
+        <keyboard-shortcut first-keystroke="meta S"/>
     </action>
 </keymap>
