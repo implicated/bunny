@@ -17,6 +17,113 @@
     <depends>PlantUML integration</depends>
     <depends>com.mallowigi</depends>
 
+    <description><![CDATA[
+        <div>
+            <div>
+                <h3 >Bunny provides one-click installation of some of the most commonly used plugins and a set of keymaps.</h3>
+                <div>
+                    <ul>
+                        <li>
+                            <p>Bundle Common Plugins</p>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/10044-atom-material-icons">Atom
+                                            Material Icons</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/164-ideavim">IdeaVim</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/7086-acejump">AceJump</a></p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="https://plugins.jetbrains.com/plugin/9615-ideavimextension">IdeaVimExtension</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/13360-ideavim-easymotion">IdeaVim-EasyMotion</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/19417-ideavim-quickscope">IdeaVim-Quickscope</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/7391-asciidoc">AsciiDoc</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/7017-plantuml-integration">PlantUML
+                                            Integration</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/2162-string-manipulation">String
+                                            Manipulation</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/10080-rainbow-brackets">Rainbow
+                                            Brackets</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Integration Plugins</p>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/12131-one-dark-native">One Dark
+                                            Native</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a href="https://plugins.jetbrains.com/plugin/9966-native-terminal">Native
+                                            Terminal</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Integration Customize Keymaps</p>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            <a href="https://github.com/JetBrains/intellij-community/blob/master/platform/platform-resources/src/keymaps/Mac%20OS%20X%2010.5%2B.xml">IntelliJ
+                                                Mac OS X 10.5+</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Integration Live Template</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3>TODO</h3>
+                <div>
+                    <ul>
+                        <li>
+                            <p>&#10063; Integration Code Style</p>
+                        </li>
+                        <li>
+                            <p>&#10063; Integration Postfix Completion</p>
+                        </li>
+                        <li>
+                            <p>&#10063; Integration Code Completion</p>
+                        </li>
+                        <li>
+                            <p>&#10063; Integration Advanced Setting</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        ]]>
+    </description>
+
     <extensions defaultExtensionNs="com.intellij">
         <bundledKeymap file="vim.xml"/>
         <defaultLiveTemplates file="/liveTemplates/bunny-asciidoc.xml"/>
