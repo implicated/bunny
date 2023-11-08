@@ -13,7 +13,6 @@
     <depends>com.joshestein.ideavim-quickscope</depends>
     <depends>org.jetbrains.IdeaVim-EasyMotion</depends>
     <depends>String Manipulation</depends>
-    <depends>izhangzhihao.rainbow.brackets</depends>
     <depends>PlantUML integration</depends>
     <depends>com.mallowigi</depends>
 
