@@ -4,4 +4,9 @@
             <option name="OTHER" value="true" />
         </context>
     </template>
+    <template name="todo" value="// zy-todo " description="" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
 </templateSet>

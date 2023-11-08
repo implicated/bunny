@@ -158,4 +158,10 @@
             <option name="AsciiDoc" value="true"/>
         </context>
     </template>
+    <template name="qaa" value="[qanda]&#10;$Q$?::&#10;$END$" description="question and answer" toReformat="false" toShortenFQNames="false">
+        <variable name="Q" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="AsciiDoc" value="true" />
+        </context>
+    </template>
 </templateSet>
